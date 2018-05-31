@@ -1,4 +1,5 @@
-const app = require('express')();
+const express = require('express');
+const app = express();
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const bodyParser = require('body-parser');
@@ -25,8 +26,4 @@ require('./routes/entryRoutes')(app);
 
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
-});
-
-app.get('/', (req, res) => {
-  res.send('ROOT ROUTE');
 });
