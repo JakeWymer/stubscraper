@@ -11,7 +11,7 @@ module.exports = (app) => {
     }
   });
 
-  app.post('/api/entries', (req, res) => {    
+  app.post('/api/entries', (req, res) => { 
     const entry = new Entry({ 
       name: req.body.name, 
       phoneNumber: req.body.phoneNumber, 
@@ -19,6 +19,7 @@ module.exports = (app) => {
       url: req.body.url, 
       priceMax: req.body.priceMax 
     });
+    
     entry.save();
     res.send(entry);
   });
