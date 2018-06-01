@@ -53,9 +53,9 @@ class ListItem extends Component {
       return(
         <tr>
         <td><input type="text" name="name" value={this.state.name} onChange={ (e) => this.handleChange(e) }/></td>
-        <td>{ this.props.entry.phoneNumber }</td>
-        <td>{ this.props.entry.url }</td>
-        <td>{ this.props.entry.priceMax }</td>
+        <td><input type="text" name="phoneNumber" value={this.state.phoneNumber} onChange={ (e) => this.handleChange(e) }/></td>
+        <td><input type="text" name="url" value={this.state.url} onChange={ (e) => this.handleChange(e) }/></td>
+        <td><input type="text" name="priceMax" value={this.state.priceMax} onChange={ (e) => this.handleChange(e) }/></td>
         <td><Button color="success" onClick={ () => this.handleClick() }><i className="fas fa-check-circle fa-2x"></i></Button></td>
         <td><Button color="danger" onClick={ () => this.delete() }><i className="fas fa-trash-alt fa-2x"></i></Button></td>
       </tr>
@@ -64,9 +64,9 @@ class ListItem extends Component {
       return(
         <tr>
           <th scope="row">{ this.state.name }</th>
-          <td>{ this.props.entry.phoneNumber }</td>
-          <td>{ this.props.entry.url }</td>
-          <td>{ this.props.entry.priceMax }</td>
+          <td>{ this.state.phoneNumber }</td>
+          <td>{ this.state.url }</td>
+          <td>{ this.state.priceMax }</td>
           <td><Button color="warning" onClick={ () => this.handleClick() }><i className="fas fa-edit fa-2x"></i></Button></td>
           <td><Button color="danger" onClick={ () => this.delete() }><i className="fas fa-trash-alt fa-2x"></i></Button></td>
         </tr>
