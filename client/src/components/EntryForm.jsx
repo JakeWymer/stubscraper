@@ -20,7 +20,6 @@ class EntryForm extends Component {
       modal: false,
       name: '',
       phone: '',
-      email: '',
       url: '',
       priceMax: ''
     };
@@ -45,14 +44,13 @@ class EntryForm extends Component {
     const data = {
       name: this.state.name,
       phoneNumber: this.state.phone,
-      email: this.state.email,
       url: this.state.url,
       priceMax: this.state.priceMax
     }
 
     this.props.postEntry(data);
 
-    this.setState({ name: '', phone: '', email: '', url: '', priceMax: '' });
+    this.setState({ name: '', phone: '', url: '', priceMax: '' });
   }
 
   render() {
@@ -74,13 +72,6 @@ class EntryForm extends Component {
                   <Label for="phone-input">Phone</Label>
                   <Input type="text" name="phone" id="phone-input"
                     value={ this.state.phone }
-                    onChange={ this.handleChange }
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <Label for="email-input">Email</Label>
-                  <Input type="email" name="email" id="email-input"
-                    value={ this.state.email }
                     onChange={ this.handleChange }
                   />
                 </FormGroup>
