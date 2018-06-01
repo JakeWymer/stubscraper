@@ -23,7 +23,7 @@ class ListView extends Component {
         return <h2>No entries.</h2>;
       default:        
         return this.props.entries.map((entry, i) => {
-          return <ListItem key={i} entry={entry} />
+          return <ListItem key={entry._id} entry={entry} />
         });
     }
   }
@@ -36,9 +36,10 @@ class ListView extends Component {
             <tr>
               <th>Name</th>
               <th>Phone</th>
-              <th>Email</th>
               <th>URL</th>
               <th>Max</th>
+              <th>Edit</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
